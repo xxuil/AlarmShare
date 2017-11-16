@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\airha\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_77da4ba8c63d99713feddb2bdfebf83640b15e9b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\airha\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-ddb-document\2.4.4\cae5311ef2d3d9f0c806c2f55a07c3a66897b6fb\aws-android-sdk-ddb-document-2.4.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="cae5311ef2d3d9f0c806c2f55a07c3a66897b6fb">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\pre-dexed\debug\aws-android-sdk-ddb-document-2.4.4_13cb2e10e69bb5b6c2abf3dfeac0bce7c1bdcf53.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6124e2d3803ca60a7d45eeb359f9f2b264f08596">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_6110e85e0525bd31b410cfdf8efdba9a00372604\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\airha\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.4.0\ea392375cf9ff59234a82e7928a204215ccc98cd\butterknife-annotations-8.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\pre-dexed\debug\butterknife-annotations-8.4.0_d7a19319063abce74122d9736378363c94513ebe.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_ce3f3097f282d94d27dba5a6746357f51e1e6b4c\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\airha\.android\build-cache\8c8f9eaf9cfb0eb0167fdc0e20a6b217589f0ea9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\pre-dexed\debug\classes_a8ee1941e13bfe21bc97c88fd59703efe9d09fb3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\airha\.android\build-cache\afe047859eae93e034792aab6d0c717d190ebad8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\pre-dexed\debug\classes_148c03b41bab635815d4ee803eb07f3901b6e38a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\airha\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-core\2.4.4\be72e3b1184efe23e7db677c6a2c0eec39744162\aws-android-sdk-core-2.4.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="be72e3b1184efe23e7db677c6a2c0eec39744162">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\pre-dexed\debug\aws-android-sdk-core-2.4.4_06ab0eb83033d26b0b4664f20c27194440bff9b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Program Files\Android\Android Studio\gradle\m2repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\pre-dexed\debug\gson-2.2.4_313aff129984a0a45e086871ec03bfcc02e7284e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\airha\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.1.0\support-annotations-24.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="8a23146e1a8c7cb4758e3d3f62449213f1e51f67">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\pre-dexed\debug\support-annotations-24.1.0_79ef1b5d8966ed56a0f40949adbd6017677f41fe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\airha\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\20.0\89507701249388e1ed5ddcf8c41f4ce1be7831ef\guava-20.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="89507701249388e1ed5ddcf8c41f4ce1be7831ef">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\pre-dexed\debug\guava-20.0_ce6294108964249c18b7b441ffb9540cb5015ccb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\airha\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-ddb\2.4.4\7bf3d671462e09a84b73b797ddbed34900e0bfb9\aws-android-sdk-ddb-2.4.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7bf3d671462e09a84b73b797ddbed34900e0bfb9">
+        <dex dex="C:\Users\airha\Desktop\DynamoDB_DocumentAPI_Notes\app\build\intermediates\pre-dexed\debug\aws-android-sdk-ddb-2.4.4_0a36b0d9ee4da9382ffee24b59091ea05e665e34.jar" />
+    </item>
+
+</items>
