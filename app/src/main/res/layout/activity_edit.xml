@@ -59,10 +59,14 @@
         android:layout_alignParentTop="true"
         android:fillViewport="true">
 
-        <EditText
-            android:id="@+id/etText"
+        <TimePicker
+            android:id="@+id/eTime"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="top|left" />
+            android:layout_above="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp" />
+
     </ScrollView>
+
 </RelativeLayout>

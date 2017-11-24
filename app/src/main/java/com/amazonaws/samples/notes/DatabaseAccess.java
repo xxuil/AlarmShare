@@ -33,7 +33,7 @@ public class DatabaseAccess {
     /**
      * The Amazon Cognito POOL_ID to use for authentication and authorization.
      */
-    private final String COGNITO_POOL_ID = "HIDDEN FOR GITHUB";
+    private final String COGNITO_POOL_ID = "us-east-1:30b96156-8f1a-46c7-bae3-e1d62a13cfd1";
 
     /**
      * The AWS Region that corresponds to the POOL_ID above
@@ -45,7 +45,7 @@ public class DatabaseAccess {
      * that this is the "long name" of the table, as specified in the Resources section of
      * the console.  This should be defined with the Notes schema.
      */
-    private final String DYNAMODB_TABLE = "HIDDEN FOR GITHUB";
+    private final String DYNAMODB_TABLE = "clocksandstuff-mobilehub-1309598133-Notes";
 
     /**
      * The Android calling context

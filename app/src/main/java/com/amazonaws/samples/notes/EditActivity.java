@@ -12,11 +12,14 @@
  */
 package com.amazonaws.samples.notes;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TimePicker;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;import com.amazonaws.mobileconnectors.dynamodbv2.document.datatype.Document;
 
@@ -27,7 +30,7 @@ public class EditActivity extends Activity {
     /**
      * The Text Editor
      */
-    @BindView(R.id.etText) EditText etText;
+    @BindView(R.id.eTime) TimePicker eTime;
 
     /**
      * The Memo being edited
@@ -59,14 +62,15 @@ public class EditActivity extends Activity {
      * Event Handler called when the Save button is clicked
      * @param view the initiating view
      */
+    @TargetApi(23)
     public void onSaveClicked(View view) {
         if (memo == null) {
             Document newMemo = new Document();
-            newMemo.put("content", etText.getText().toString());
+            newMemo.put("content", eTime.getHour()+":"+eTime.getMinute());
             CreateItemAsyncTask task = new CreateItemAsyncTask();
             task.execute(newMemo);
         } else {
-            memo.put("content", etText.getText().toString());
+            memo.put("content", eTime.getHour()+":"+eTime.getMinute());
             UpdateItemAsyncTask task = new UpdateItemAsyncTask();
             task.execute(memo);
         }
@@ -93,10 +97,13 @@ public class EditActivity extends Activity {
         }
 
         @Override
+        @TargetApi(23)
         protected void onPostExecute(Document result) {
             if (result != null) {
                 memo = result;
-                etText.setText(memo.get("content").asString());
+                String eTimes = memo.get("content").asString();
+                eTime.setMinute(Integer.parseInt(eTimes.substring(eTimes.indexOf(":")+1)));
+                eTime.setHour(Integer.parseInt(eTimes.substring(0,eTimes.indexOf(":"))));
             }
         }
     }
