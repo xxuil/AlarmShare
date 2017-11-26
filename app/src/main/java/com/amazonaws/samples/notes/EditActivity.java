@@ -18,6 +18,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 import butterknife.BindView;
@@ -31,6 +32,7 @@ public class EditActivity extends Activity {
      * The Text Editor
      */
     @BindView(R.id.eTime) TimePicker eTime;
+    @BindView(R.id.eDescript) TextView eDescript;
 
     /**
      * The Memo being edited
@@ -67,10 +69,12 @@ public class EditActivity extends Activity {
         if (memo == null) {
             Document newMemo = new Document();
             newMemo.put("content", eTime.getHour()+":"+eTime.getMinute());
+            newMemo.put("description", eDescript.getText().toString());
             CreateItemAsyncTask task = new CreateItemAsyncTask();
             task.execute(newMemo);
         } else {
             memo.put("content", eTime.getHour()+":"+eTime.getMinute());
+            memo.put("description", eDescript.getText().toString());
             UpdateItemAsyncTask task = new UpdateItemAsyncTask();
             task.execute(memo);
         }
@@ -104,6 +108,7 @@ public class EditActivity extends Activity {
                 String eTimes = memo.get("content").asString();
                 eTime.setMinute(Integer.parseInt(eTimes.substring(eTimes.indexOf(":")+1)));
                 eTime.setHour(Integer.parseInt(eTimes.substring(0,eTimes.indexOf(":"))));
+                eDescript.setText(memo.get("description").asString());
             }
         }
     }

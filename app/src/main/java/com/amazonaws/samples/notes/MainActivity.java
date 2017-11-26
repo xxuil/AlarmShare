@@ -221,8 +221,10 @@ public class MainActivity extends Activity {
 
             // Fill in the text fields
             final Document memo = memos.get(position);
-            txtDate.setText(asDateString(memo.get("creationDate").asLong()));
-            txtMemo.setText(shortenString(memo.get("content").asString()));
+            if(memo.containsKey("description") && memo.containsKey("content")) {
+                txtDate.setText(memo.get("description").asString());
+                txtMemo.setText(shortenString(memo.get("content").asString()));
+            }
 
             // Wire up the event handlers for the buttons
             btnEdit.setOnClickListener(new View.OnClickListener() {

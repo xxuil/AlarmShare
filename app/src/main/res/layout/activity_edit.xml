@@ -23,50 +23,52 @@
     android:paddingTop="8dp"
     tools:context="com.amazonaws.samples.notes.EditActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+    <TextView
+        android:id="@+id/eDescript"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/btnSave"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"
+        android:editable="true"
+        android:focusableInTouchMode="true"
+        android:text="Description" />
+
+    <TimePicker
+        android:id="@+id/eTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnSave"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:onClick="onSaveClicked"
-            android:text="Save" />
-
-        <Button
-            android:id="@+id/btnCancel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:onClick="onCancelClicked"
-            android:text="Cancel" />
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/linearLayout"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:fillViewport="true">
+        android:layout_weight="1"
+        android:saveEnabled="false"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:visibility="visible" />
 
-        <TimePicker
-            android:id="@+id/eTime"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/linearLayout"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="30dp" />
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="154dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:onClick="onSaveClicked"
+        android:text="Save" />
 
-    </ScrollView>
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="145dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:onClick="onCancelClicked"
+        android:text="Cancel"
+        android:visibility="visible" />
 
 </RelativeLayout>
