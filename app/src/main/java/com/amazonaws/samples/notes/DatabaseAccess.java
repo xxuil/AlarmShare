@@ -34,7 +34,6 @@ public class DatabaseAccess {
      * The Amazon Cognito POOL_ID to use for authentication and authorization.
      */
     private final String COGNITO_POOL_ID = "us-east-1:30b96156-8f1a-46c7-bae3-e1d62a13cfd1";
-
     /**
      * The AWS Region that corresponds to the POOL_ID above
      */
@@ -98,6 +97,29 @@ public class DatabaseAccess {
         }
         return instance;
     }
+
+    public String getID(){
+        if(credentialsProvider != null){
+            return credentialsProvider.getCachedIdentityId();
+        }
+        return null;
+    }
+
+    public void setID(Context c, String s){
+
+        credentialsProvider = new CognitoCachingCredentialsProvider(c,
+                "us-east-1:41d02f2c-b9e0-4436-8df0-4cadb5887ff5",
+                COGNITO_POOL_ID,
+                "arn:aws:iam::226897146044:role/mobilehubproject_auth_MOBILEHUB_777323671",
+                "arn:aws:iam::226897146044:role/mobilehubproject_auth_MOBILEHUB_777323671",
+                COGNITO_REGION);
+
+        dbClient = new AmazonDynamoDBClient(credentialsProvider);
+
+        // Create a table reference
+        dbTable = Table.loadTable(dbClient, DYNAMODB_TABLE);
+    }
+
 
     /**
      * create a new memo in the database

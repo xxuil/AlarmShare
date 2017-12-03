@@ -39,7 +39,7 @@
             android:layout_width="16dp"
             android:layout_height="16dp"
             android:layout_alignParentRight="true"
-            android:src="@drawable/delete" />
+            android:src="@drawable/star" />
 
         <TextView
             android:id="@+id/txtDate"

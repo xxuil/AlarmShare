@@ -79,6 +79,7 @@ public class MainActivity extends Activity {
                 txtMemo.setText(shortenString(memo.get("content").asString()));
             }
         });
+        getActionBar().setTitle("Shared Alarm App");
     }
 
     /**
@@ -96,6 +97,11 @@ public class MainActivity extends Activity {
      */
     public void onAddClicked(View view) {
         Intent intent = new Intent(this, EditActivity.class);
+        startActivity(intent);
+    }
+
+    public void onAddUserClicked(View view) {
+        Intent intent = new Intent(this, EditUserActivity.class);
         startActivity(intent);
     }
 
