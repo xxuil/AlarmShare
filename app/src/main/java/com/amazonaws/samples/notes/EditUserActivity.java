@@ -90,6 +90,8 @@ public class EditUserActivity extends Activity {
     public void onStarClicked(Document memo) {
         GoldStar task = new GoldStar();
         task.execute();
+        ReturnID task2 = new ReturnID();
+        task2.execute();
         Intent intent = new Intent(this, EditActivity.class);
         intent.putExtra("MEMO", memo.get("noteId").asString());
         startActivity(intent);
@@ -116,6 +118,8 @@ public class EditUserActivity extends Activity {
 //            task.execute(memo);
 //        }
         // Finish this activity and return to the prior activity
+        ReturnID task = new ReturnID();
+        task.execute();
         this.finish();
     }
     protected void populateMemoList(List<Document> memos) {
@@ -128,6 +132,8 @@ public class EditUserActivity extends Activity {
      * @param view the initiating view
      */
     public void onCancelClicked(View view) {
+        ReturnID task = new ReturnID();
+        task.execute();
         this.finish();
     }
 
@@ -166,6 +172,19 @@ public class EditUserActivity extends Activity {
         }
     }
 
+    private class ReturnID extends AsyncTask<Void, Void, String> {
+        @Override
+        protected String doInBackground(Void... params) {
+            DatabaseAccess databaseAccess = DatabaseAccess.getInstance(EditUserActivity.this);
+            databaseAccess.returnID(EditUserActivity.this);
+            return databaseAccess.getID();
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            System.out.println("Returned ID");
+        }
+    }
     private class GetUserNameAsync extends AsyncTask<Void, Void, String> {
         @Override
         protected String doInBackground(Void... params) {
