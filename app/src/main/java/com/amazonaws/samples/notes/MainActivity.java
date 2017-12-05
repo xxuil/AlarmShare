@@ -208,23 +208,18 @@ public class MainActivity extends Activity {
             removeDocumentsFromMemoList(documents);
         }
     }
-    private int counter = 0;
+
     private class MemoAdapter extends ArrayAdapter<Document> {
         MemoAdapter(Context context, List<Document> objects) {
             super(context, 0, objects);
         }
-
+        int counter = 0;
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
                 convertView = getLayoutInflater().inflate(R.layout.layout_list_item, parent, false);
             }
-            if(counter %3 == 0) {
-                convertView.setBackgroundColor(getResources().getColor(android.R.color.holo_red_dark));
-            }
-            else if(counter %3 == 1){
-                convertView.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_bright));
-            }
+
             ImageView btnEdit = (ImageView) convertView.findViewById(R.id.btnEdit);
             ImageView btnDelete = (ImageView) convertView.findViewById(R.id.btnDelete);
             TextView txtDate = (TextView) convertView.findViewById(R.id.txtDate);
@@ -235,6 +230,12 @@ public class MainActivity extends Activity {
             if(memo.containsKey("description") && memo.containsKey("content")) {
                 txtDate.setText(memo.get("description").asString());
                 txtMemo.setText(shortenString(memo.get("content").asString()));
+            }
+            if(memo.get("userbool").asString().equals("1")) {
+                convertView.setBackgroundColor(getResources().getColor(android.R.color.holo_red_dark));
+            }
+            else if(memo.get("userbool").asString().equals("0")){
+                convertView.setBackgroundColor(getResources().getColor(android.R.color.holo_blue_bright));
             }
 
             // Wire up the event handlers for the buttons
